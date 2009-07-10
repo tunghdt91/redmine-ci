@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteRule !\.(js|ico|txt|gif|jpg|png|css)$ index.php/$1 [L]
+
+RewriteRule ^(.*)$ /redmine-ci/index.php/$1 [L]
